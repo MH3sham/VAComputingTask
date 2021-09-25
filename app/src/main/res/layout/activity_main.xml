@@ -82,6 +82,7 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:orientation="horizontal">
 
+
                     <RelativeLayout
                         android:layout_weight="1"
                         android:id="@+id/btnPlus"
@@ -232,7 +233,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        tools:itemCount="10"
+                        tools:itemCount="5"
                         tools:listitem="@layout/item_operation"/>
 
                 </LinearLayout>
@@ -268,7 +269,7 @@
                         android:layout_margin="@dimen/_3sdp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        tools:itemCount="15"
+                        tools:itemCount="5"
                         tools:listitem="@layout/item_operation"/>
 
                 </LinearLayout>
