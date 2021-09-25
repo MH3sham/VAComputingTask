@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <FrameLayout
+                    android:id="@+id/lPin"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:animateLayoutChanges="true">
+
+                    <ImageView
+                        android:id="@+id/ivPinOriginal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_pin_only"
+                        tools:ignore="ContentDescription,UseAppTint" />
+
+                    <ImageView
+                        android:id="@+id/ivPin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_circle_only"
+                        tools:ignore="ContentDescription,UseAppTint" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/currentLocationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_my_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

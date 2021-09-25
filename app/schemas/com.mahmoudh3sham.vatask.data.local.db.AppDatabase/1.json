@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "47772799b28c04416066889daa3860c5",
+    "entities": [
+      {
+        "tableName": "equations_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `fNum` REAL NOT NULL, `sNum` REAL NOT NULL, `operation` TEXT NOT NULL, `result` REAL NOT NULL, `status` INTEGER NOT NULL, `delay` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fNum",
+            "columnName": "fNum",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sNum",
+            "columnName": "sNum",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "operation",
+            "columnName": "operation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "result",
+            "columnName": "result",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "delay",
+            "columnName": "delay",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '47772799b28c04416066889daa3860c5')"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VA Task</string>
+    <string name="map_api_key">AIzaSyAoxjEJT8_MhbGDW-DpEbRSNMvo8PltUKo</string>
+    <string name="enter_f_error">Enter First Number</string>
+    <string name="enter_s_error">Enter Second Number</string>
+    <string name="enter_operator_error">Choose An Operator</string>
+    <string name="enter_delay_error">Enter Delay Number In Seconds</string>
+    <string name="enter_valid_delay_error">Enter A Valid Delay Number In Seconds</string>
+    <string name="div_error">Can\'t divide by zero</string>
+    <string name="no_address_found">No Address Found</string>
+    <string name="location_rationale">Location permission is required to get your current location</string>
+
+</resources>
